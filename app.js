@@ -1,11 +1,11 @@
-const endereço = {
+const enderecousuario = {
+    
 rua: document.querySelector('#rua'),
 bairro : document.querySelector('#bairro'),
 cidade : document.querySelector('#cidade'),
-estado : document.querySelector('#estado')
-
+estado : document.querySelector('#estado'),
+cep :"06520080"
 }
-const  cep ="06520080";
 
 async function consultaCEP(cep){
 
@@ -18,17 +18,22 @@ const cepUsuario = {
 rua: resposta.logradouro,
 bairro: resposta.bairro,
 cidade: resposta.localidade,
-estado: resposta.uf
+estado: resposta.estado,
+
 
 }
 
-rua.innerText= cepUsuario.rua
-bairro.innerText= cepUsuario.bairro
-cidade.innerText= cepUsuario.cidade
-estado.innerText= cepUsuario.estado
-
-console.log(cepUsuario)
+inserirdados(cepUsuario)
 
 }
 
+function inserirdados(cepUsuario){
 
+enderecousuario .rua.innerText= cepUsuario.rua
+enderecousuario .bairro.innerText= cepUsuario.bairro
+enderecousuario .cidade.innerText= cepUsuario.cidade
+enderecousuario .innerText= cepUsuario.estado
+
+}
+
+consultaCEP(enderecousuario .cep)
