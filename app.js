@@ -13,7 +13,7 @@ const url = await fetch (`https://viacep.com.br/ws/${cep}/json/`)
 
 const resposta = await url.json();
 
-let cepUsuario = {
+const cepUsuario = {
 
 rua: resposta.logradouro,
 bairro: resposta.bairro,
@@ -31,5 +31,4 @@ console.log(cepUsuario)
 
 }
 
-consultaCEP(cep)
 
